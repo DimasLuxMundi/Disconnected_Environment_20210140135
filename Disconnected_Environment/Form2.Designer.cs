@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nmp = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nmp = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.nmp)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.idp = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // nmp
+            // dataGridView1
             // 
-            this.nmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.nmp.Location = new System.Drawing.Point(146, 33);
-            this.nmp.Name = "nmp";
-            this.nmp.RowHeadersWidth = 51;
-            this.nmp.RowTemplate.Height = 24;
-            this.nmp.Size = new System.Drawing.Size(461, 213);
-            this.nmp.TabIndex = 0;
-            this.nmp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(146, 33);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(461, 213);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnOpen
             // 
@@ -74,7 +76,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnSave.Location = new System.Drawing.Point(283, 313);
+            this.btnSave.Location = new System.Drawing.Point(283, 345);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 40);
             this.btnSave.TabIndex = 3;
@@ -85,7 +87,7 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.CadetBlue;
-            this.btnClear.Location = new System.Drawing.Point(391, 313);
+            this.btnClear.Location = new System.Drawing.Point(391, 345);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 40);
             this.btnClear.TabIndex = 4;
@@ -93,12 +95,12 @@
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox1
+            // nmp
             // 
-            this.textBox1.Location = new System.Drawing.Point(283, 273);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 22);
-            this.textBox1.TabIndex = 5;
+            this.nmp.Location = new System.Drawing.Point(283, 273);
+            this.nmp.Name = "nmp";
+            this.nmp.Size = new System.Drawing.Size(183, 22);
+            this.nmp.TabIndex = 5;
             // 
             // label1
             // 
@@ -110,23 +112,43 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Nama Prodi";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(199, 312);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label2.Size = new System.Drawing.Size(55, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "ID Prodi";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // idp
+            // 
+            this.idp.Location = new System.Drawing.Point(283, 312);
+            this.idp.Name = "idp";
+            this.idp.Size = new System.Drawing.Size(183, 22);
+            this.idp.TabIndex = 8;
+            // 
             // FormDataProdi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.idp);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nmp);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnOpen);
-            this.Controls.Add(this.nmp);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "FormDataProdi";
             this.Text = "Data Prodi";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nmp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,12 +156,14 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView nmp;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nmp;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox idp;
     }
 }
